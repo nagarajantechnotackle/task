@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-poppins: "Poppins", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-openSans {
+  font-family: var(--font-open-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* banner styles  */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 16px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: #fff;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.desktop-view {
+  display: block;
+}
+.mobile-view {
+  display: none;
+}
+
+@media (max-width: 790px) {
+  .desktop-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .d-none {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+  .banner-image_section {
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  .banner-image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
