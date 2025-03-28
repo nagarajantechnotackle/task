@@ -49,6 +49,14 @@ bun dev
 Open http://localhost:3000 to view the application.
 
 
+ScreenShots:
+
+![Home Page](./public/images/bannerfile.png)
+![Services Page](./public/images/servicefile.png)
+![Brands Page](./public/images/responsive.png)
+![Brands Page](./public/images/serviceResponsive.png)
+
+
 Note: Add the actual screenshots under /public/images/ and update the image paths.
 
 🛠 Features
