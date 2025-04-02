@@ -81,20 +81,37 @@ const CarService: React.FC = () => {
   return (
     <div className="bg-[#20006D] min-h-screen lg:py-20 py-5 text-white container-fluid lg:px-20 px-5 relative">
       {/* Header Section */}
-      <div className="flex items-center gap-4 mb-6 z-10">
-        <Image
-          src={"/images/serviceCarIcon.png"}
-          alt="Car"
-          width={75}
-          height={75}
-          className=""
-        />
-        <div>
-          <h2 className=" font-bold text-[24px]">
-            Maruti Swift <span className="text-sm">Lxi, Petrol, 2009</span>
-          </h2>
 
-          <p className="font-semibold text-[24px]">DL12AT5140</p>
+      <div className="flex items-center justify-between mb-5">
+        <div className="flex items-center gap-4 mb-6 z-10">
+          <Image
+            src={"/images/serviceCarIcon.png"}
+            alt="Car"
+            width={75}
+            height={75}
+            className=""
+          />
+          <div>
+            <h2 className=" font-bold text-[24px] font-poppins flex items-center">
+              <span>Maruti Swift </span>{" "}
+              <span className="text-[24px] font-light ps-4">
+                Lxi, Petrol, 2009
+              </span>{" "}
+              <Image
+                src={"/images/edit.png"}
+                className="h-[100%] ps-4 w-[40px]"
+                alt="edit"
+                height={20}
+                width={20}
+              ></Image>
+            </h2>
+            <p className="font-semibold text-[24px] font-poppins">DL12AT5140</p>
+          </div>
+        </div>
+        <div>
+          <p className="font-bold text-[24px] font-poppins text-end">
+            There are 12 services <br /> available for Maruti Swift
+          </p>
         </div>
       </div>
 
@@ -111,12 +128,13 @@ const CarService: React.FC = () => {
             }`}
           >
             <Image
+            className="w-[73px] h-[73px] object-contain"
               src={`/images/${tab.icon}.png`}
               alt="Time"
               width={50}
               height={50}
             />{" "}
-            <p className="mt-2">{tab.title}</p>
+            <p className="mt-2 font-poppins text-[20px]">{tab.title}</p>
           </div>
         ))}
       </div>
@@ -130,7 +148,7 @@ const CarService: React.FC = () => {
               className="bg-white text-black p-6 flex flex-col justify-between items-center shadow-lg relative border border-[#dedede]"
             >
               <div className="flex items-center justify-between w-full">
-                <h3 className="font-bold text-2xl">{service.title}</h3>
+                <h3 className="font-bold text-[30px] font-poppins">{service.title}</h3>
 
                 <div className="text-right">
                   <div className="flex items-center gap-2 mt-2">
@@ -142,7 +160,7 @@ const CarService: React.FC = () => {
                     </span>
                   </div>
                   <div>
-                    <span className="text-gray-500 text-sm">tax included</span>
+                    <span className="text-gray-500 text-[12px] font-poppins ">tax included</span>
                   </div>
                 </div>
               </div>
@@ -155,7 +173,7 @@ const CarService: React.FC = () => {
                       width={20}
                       height={20}
                     />
-                    <span className="text-gray-600 text-lg">
+                    <span className="text-gray-600 text-[14px] font-openSans">
                       {service.time}
                     </span>
                   </div>
@@ -166,20 +184,21 @@ const CarService: React.FC = () => {
                       width={20}
                       height={20}
                     />
-                    <span className="text-gray-600 text-lg">
+                    <span className="text-gray-600 text-lg text-[14px] font-openSans">
                       {service.service}
                     </span>
                   </div>
-                  <p className="text-blue-600 cursor-pointer mt-2 mb-8">
+                  <p className="text-blue-600 cursor-pointer mt-2 mb-8 text-[12px] font-openSans">
                     See details
                   </p>
 
-                  <button className="text-[12px] bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg mt-4">
+                  <button className="text-[12px] font-openSans bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg mt-4">
                     BOOK NOW
                   </button>
                 </div>
                 <div className="w-1/3 flex justify-end absolute right-0 bottom-0">
                   <Image
+                  className="w-[200px] h-[200px] object-cover"
                     src={`/images/${service.image}.png`}
                     alt={service.title}
                     width={200}
@@ -195,7 +214,7 @@ const CarService: React.FC = () => {
 
       <div className="absolute top-0 right-0 w-[100%] h-[100%] z-0">
         <Image
-          src={"/images/servicebg.png"} 
+          src={"/images/servicebg.png"}
           alt="image"
           width={100}
           height={100}

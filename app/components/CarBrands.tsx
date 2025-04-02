@@ -14,10 +14,11 @@ const steps = [
 const CarBrandSection = () => {
   return (
     <div className="flex items-center justify-center flex-wrap py-10 bg-white">
-      <div className="flex flex-col md:flex-row items-center gap-10 w-4/5">
+      <div className="flex flex-col md:flex-row items-start gap-10 w-4/5">
         {/* Car Brands Section */}
         <div className="flex flex-col items-center w-full md:w-1/2 text-center">
-          <h2 className="lg:text-[36px] text-[24px] font-bold text-gray-900">Car Brands we service</h2>
+          <h2 className="lg:text-[36px] text-[24px] font-bold text-gray-900 font-poppins">Car Brands we service <br></br>
+            ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h2>
           <div className="w-full mt-5 lg:mt-16">
             <Swiper
               slidesPerView={3}
@@ -33,7 +34,7 @@ const CarBrandSection = () => {
             >
               {carBrands.map((brand) => (
                 <SwiperSlide key={brand} className="flex justify-center">
-                  <Image src={`/images/${brand}.png`} alt={brand} width={50} height={50} />
+                  <Image src={`/images/${brand}.png`} alt={brand} width={85} height={55} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -41,17 +42,17 @@ const CarBrandSection = () => {
         </div>
 
         {/* Divider */}
-        <div className="hidden md:block w-px bg-gray-300 h-24"></div>
+        <div className="hidden md:block w-[1px] bg-gray-300 h-[300px]"></div>
 
         {/* Steps Section */}
         <div className="flex flex-col items-center w-full md:w-1/2 text-center d-none ">
-          <h2 className="text-[36px] font-bold text-gray-900 ">Secure your service in Just 3 simple steps</h2>
+          <h2 className="text-[36px] font-bold text-gray-900 font-poppins">Secure your service in Just 3 simple steps</h2>
           <div className="flex items-center justify-center gap-6 lg:mt-16 mt-5">
             {steps.map((step, index) => (
               <div key={index} className="flex items-start gap-4">
                 <div className="flex flex-col items-center w-[60px]">
-                  <Image src={`/images/${step.src}.png`} alt={step.text} width={75} height={75} />
-                  <p className="h-[60px] mt-2 text-sm font-medium text-gray-700">{step.text}</p>
+                  <Image src={`/images/${step.src}.png`} alt={step.text} width={75} height={65} />
+                  <p className="h-[60px] mt-2 text-sm text-gray-700 font-openSans text-[15px] font-bold">{step.text}</p>
                 </div>
                 {index < steps.length - 1 && <span className="text-gray-400 text-[60px] leading-[0.3]">→</span>}
               </div>

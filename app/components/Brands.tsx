@@ -19,10 +19,10 @@ const brands = [
 export default function BrandsCarousel() {
   return (
     <div className="bg-gray-100 py-10">
-      <h2 className="text-center text-2xl font-semibold text-gray-800">
+      <h2 className="text-center text-[24px] font-poppins font-semibold text-gray-800">
         Brands we Use
       </h2>
-      <p className="text-center text-gray-500 mb-6">
+      <p className="text-center text-gray-500 mb-6 text-[14px] font-openSans">
         Authorized/genuine OEM/OES Parts
       </p>
       <div className="w-full overflow-hidden lg:mt-10 mt-5">
@@ -41,7 +41,7 @@ export default function BrandsCarousel() {
                 alt="Brand Logo"
                 width={75}
                 height={75}
-                className="h-16 w-auto object-contain"
+                className="h-[50px] w-[150px] object-contain"
               />
             </SwiperSlide>
           ))}

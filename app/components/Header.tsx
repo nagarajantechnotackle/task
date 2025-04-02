@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Header = () => {
   return (
     <header className="container-fluid mx-auto px-4 bg-white">
@@ -8,7 +10,13 @@ const Header = () => {
         <div className="flex items-center gap-4 flex-wrap">
           <div className="p-[1px] bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] rounded-md">
             <button className="flex items-center gap-2 px-4 py-2 bg-white text-lg font-semibold rounded-md">
-              <span className="font-openSans bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent font-bold">
+              <Image
+                src={"/images/call.png"}
+                alt="call-icon"
+                width={20}
+                height={20}
+              ></Image>
+              <span className="font-openSans text-[14px] bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent font-bold">
                 CALL US
               </span>
             </button>

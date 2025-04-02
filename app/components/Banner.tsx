@@ -27,36 +27,55 @@ const slides = [
 
 const Banner = () => {
   return (
-    <div className="container-fluid  relative w-full bg-white px-[20px] md:px-0">
+    <div className="container-fluid  relative w-full back-image lg:px-[20px] md:px-0">
       <Swiper navigation modules={[Navigation]} loop className="w-full">
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="flex items-center justify-between bg-gradient-to-r from-blue-800 to-purple-700 text-white lg:px-16 px-5 rounded-lg py-10">
+            {/* <div className="flex items-center justify-between bg-gradient-to-r from-blue-800 to-purple-700 text-white lg:px-16 px-5 rounded-lg  py-10"> */}
+            <div className="flex items-center justify-between text-white lg:px-16 px-5 rounded-lg py-10 ">
               <div className="relative z-10 hidden md:block">
                 <p className="text-sm font-openSans">Now in Bengaluru</p>
-                <h2 className="text-[30px] lg:text-[60px] text- font-bold mt-2 ">
+                <h2 className="text-[30px] lg:text-[60px] text- font-bold mt-2 leading-[70px]">
                   {slide.title}
                 </h2>
-                <p className="mt-2 text-lg">{slide.subtitle}</p>
-                <p className="mt-4 text-green-400">{slide.discount}</p>
-                <button className="mt-4 bg-white text-blue-700 px-10 py-3 text-[12px] rounded-sm font-semibold">
+                <p className="mt-2 text-lg font-poppins">{slide.subtitle}</p>
+                <p className="mt-8 mb-2 text-green-400 font-openSans text-[18px]">
+                  {slide.discount}
+                </p>
+                <button className=" bg-white text-blue-700 lg:px-20  px-10 py-4 text-[12px] rounded-sm font-semibold font-openSans">
                   {slide.buttonText}
                 </button>
                 <div className="mt-6 flex items-center gap-4">
                   <div className="flex items-center flex-col">
-                    <span className="text-yellow-400 text-xl">★★★★★</span>
-                    <p className="ml-2 text-[12px]">Based on 100+ ratings</p>
+                    <Image
+                      src={"/images/star.png"}
+                      alt="star"
+                      width={100}
+                      height={100}
+                    ></Image>
+                    <p className="ml-2 text-[12px] font-openSans">
+                      Based on 100+ ratings
+                    </p>
                   </div>
-                  <div className="flex items-center flex-col">
-                    <span className="text-white text-xl">5000+</span>
-                    <p className="ml-2 text-[12px]">Registered users</p>
+                  <div className="flex items-center">
+                    <Image src={"/images/chat.png"} alt="chat" width={30} height={30}></Image>
+                    <div className="flex items-center flex-col">
+                      <span className="text-white text-xl font-openSans">
+                        5000+
+                      </span>
+                      <p className="ml-2 text-[12px] font-openSans">
+                        Registered users
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="relative z-10 text-white md:px-4 py-6 md:hidden block w-100 text-start md:text-center">
-                <h2 className="text-xl font-bold">Car Servicing at-home</h2>
-                <p className="text-sm mt-1 pb-16 md:pb-0">Delivering trust always</p>
+                <h2 className="text-[30px] font-bold font-poppins">Car Servicing at-home</h2>
+                <p className="text-sm mt-1 pb-16 md:pb-0">
+                  Delivering trust always
+                </p>
 
                 <div className="flex justify-between items-center text-sm mt-4">
                   <span>Now in Bangalore</span>
@@ -71,12 +90,11 @@ const Banner = () => {
               </div>
               <div className="banner-image_section ">
                 <Image
-                
                   src={slide.image}
                   alt="Car Service"
                   width={700}
                   height={300}
-                  className="rounded-lg banner-image lg:w-[700px] lg:h-[400px] w-[400px]"
+                  className="rounded-lg banner-image lg:w-[700px] lg:h-[100%] w-[400px]"
                 />
               </div>
             </div>

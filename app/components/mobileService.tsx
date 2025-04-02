@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaChevronDown, FaChevronUp, FaPen } from "react-icons/fa";
+import { FaPen } from "react-icons/fa";
 import Image from "next/image";
 
 interface SubService {
