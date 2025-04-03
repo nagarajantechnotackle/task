@@ -24,7 +24,7 @@ type Services = {
 };
 
 const tabs: Tab[] = [
-  { title: "Diagnostics", icon: "carTime" },
+  { title: "Diagnostics", icon: "cartime" },
   { title: "Periodic Services", icon: "periodicService" },
   { title: "Major Repair", icon: "serviceCar" },
   { title: "Breakdown Service", icon: "breakdown" },
