@@ -121,7 +121,7 @@ const CarService: React.FC = () => {
           <div
             key={index}
             onClick={() => setActiveTab(tab.title)}
-            className={`flex flex-col items-center p-4 border rounded-lg cursor-pointer transition ${
+            className={`flex flex-col items-center p-4 border rounded-lg cursor-pointer bg-[#ffffff24]  transition ${
               activeTab === tab.title
                 ? "bg-white text-black font-bold shadow-lg"
                 : "border-white"
