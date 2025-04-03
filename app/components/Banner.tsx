@@ -27,12 +27,12 @@ const slides = [
 
 const Banner = () => {
   return (
-    <div className="container-fluid  relative w-full lg:px-0 px-4">
+    <div className="container-fluid bg-white relative w-full lg:px-0 px-4">
       <Swiper navigation modules={[Navigation]} loop className="w-full">
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             {/* <div className="flex items-center justify-between bg-gradient-to-r from-blue-800 to-purple-700 text-white lg:px-16 px-5 rounded-lg  py-10"> */}
-            <div className="back-image flex items-center justify-between text-white lg:px-16 px-5 rounded-lg py-10 ">
+            <div className="back-image flex items-center justify-between text-white lg:px-16 px-5 lg:rounded-[0px] rounded-lg py-10 ">
               <div className="relative z-10 hidden md:block">
                 <p className="text-sm font-openSans">Now in Bengaluru</p>
                 <h2 className="text-[30px] lg:text-[60px] text- font-bold mt-2 leading-[70px]">

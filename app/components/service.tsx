@@ -24,7 +24,7 @@ type Services = {
 };
 
 const tabs: Tab[] = [
-  { title: "Diagnostics", icon: "carTime" },
+  { title: "Diagnostics", icon: "cartime" },
   { title: "Periodic Services", icon: "periodicService" },
   { title: "Major Repair", icon: "serviceCar" },
   { title: "Breakdown Service", icon: "breakdown" },
@@ -123,7 +123,7 @@ const CarService: React.FC = () => {
             onClick={() => setActiveTab(tab.title)}
             className={`flex flex-col items-center p-4 border rounded-lg cursor-pointer bg-[#ffffff24]  transition ${
               activeTab === tab.title
-                ? "bg-white text-black font-bold shadow-lg"
+                ? "bg-white font-bold shadow-lg"
                 : "border-white"
             }`}
           >
@@ -134,13 +134,17 @@ const CarService: React.FC = () => {
               width={50}
               height={50}
             />{" "}
-            <p className="mt-2 font-poppins text-[20px]">{tab.title}</p>
+            <p className={`mt-2 font-poppins text-[20px]  ${
+              activeTab === tab.title
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-[#0841D1] to-[#6B01D8] font-bold "
+                : "text-white"
+            }`}>{tab.title}</p>
           </div>
         ))}
       </div>
 
       {/* Dynamic Service Display */}
-      {services[activeTab] && (
+      {/* {services[activeTab] && (
         <div className="grid md:grid-cols-2 z-10 relative">
           {services[activeTab].map((service, index) => (
             <div
@@ -164,7 +168,7 @@ const CarService: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between w-full mt-4">
+              <div className="flex justify-between w-full mt-2">
                 <div className="w-2/3">
                   <div className="flex items-center gap-2 mt-2">
                     <Image
@@ -192,7 +196,7 @@ const CarService: React.FC = () => {
                     See details
                   </p>
 
-                  <button className="text-[12px] font-openSans bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg mt-4">
+                  <button className="text-[12px] font-openSans bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white font-bold w-[182px] h-[52px] rounded-[4px] shadow-lg text-lg ">
                     BOOK NOW
                   </button>
                 </div>
@@ -210,7 +214,85 @@ const CarService: React.FC = () => {
             </div>
           ))}
         </div>
-      )}
+      )} */}
+
+
+
+
+
+{services[activeTab] && (
+  <div className="grid md:grid-cols-2 z-10 relative">
+    {services[activeTab].map((service, index) => (
+      <div
+        key={index}
+        className={`bg-white text-black p-6 flex flex-col justify-between items-center shadow-lg relative border border-[#dedede] 
+          ${index === 0 ? 'rounded-tl-lg border-tl' : ''} 
+          ${index === 1 ? 'rounded-tr-lg border-tr' : ''} 
+          ${index === 2 ? 'rounded-bl-lg border-bl' : ''} 
+          ${index === 3 ? 'rounded-br-lg border-br' : ''}`}
+      >
+        <div className="flex items-start justify-between w-full">
+          <h3 className="font-bold text-[30px] font-poppins">{service.title}</h3>
+
+          <div className="text-right">
+            <div className="flex items-center gap-2 mt-2">
+              <span className="line-through text-gray-500 text-lg">
+                {service.oldPrice}
+              </span>
+              <span className="text-3xl font-bold">{service.newPrice}</span>
+            </div>
+            <div>
+              <span className="text-gray-500 text-[12px] font-poppins ">tax included</span>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-between w-full mt-2">
+          <div className="w-2/3">
+            <div className="flex items-center gap-2 mt-2">
+              <Image
+                src={`/images/${service.timeImage}.png`}
+                alt="Time"
+                width={20}
+                height={20}
+              />
+              <span className="text-gray-600 text-[14px] font-openSans">{service.time}</span>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <Image
+                src={`/images/${service.serviceImage}.png`}
+                alt="Service"
+                width={20}
+                height={20}
+              />
+              <span className="text-gray-600 text-lg text-[14px] font-openSans">
+                {service.service}
+              </span>
+            </div>
+            <p className="text-blue-600 cursor-pointer mt-2 mb-8 text-[12px] font-openSans">
+              See details
+            </p>
+
+            <button className="text-[12px] tracking-[2px] font-openSans bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white font-bold w-[182px] h-[52px] rounded-[4px] shadow-lg text-lg ">
+              BOOK NOW
+            </button>
+          </div>
+          <div className="w-1/3 flex justify-end absolute right-0 bottom-0">
+            <Image
+              className="w-[200px] h-[200px] object-cover"
+              src={`/images/${service.image}.png`}
+              alt={service.title}
+              width={200}
+              height={200}
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
+
+
 
       <div className="absolute top-0 right-0 w-[100%] h-[100%] z-0">
         <Image
