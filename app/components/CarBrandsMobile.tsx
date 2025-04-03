@@ -5,11 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const carBrands = ["skoda", "honda", "mahindra", "hyundai", "kia", "toyota"];
-const steps = [
-  { src: "addCar", text: "Add your car" },
-  { src: "calendar", text: "Schedule Date & Time" },
-  { src: "address", text: "Share your address" },
-];
+
 
 const CarBrandSectionMobile = () => {
   return (
