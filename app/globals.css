@@ -59,6 +59,12 @@ body {
   background-size: cover;
 }
 
+
+
+.white-space-nowrap{
+  white-space: nowrap;
+}
+
 @media (max-width: 790px) {
   .desktop-view {
     display: none;

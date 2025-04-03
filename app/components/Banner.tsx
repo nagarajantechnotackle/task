@@ -27,12 +27,12 @@ const slides = [
 
 const Banner = () => {
   return (
-    <div className="container-fluid  relative w-full back-image lg:px-[20px] md:px-0">
+    <div className="container-fluid  relative w-full lg:px-0 px-4">
       <Swiper navigation modules={[Navigation]} loop className="w-full">
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             {/* <div className="flex items-center justify-between bg-gradient-to-r from-blue-800 to-purple-700 text-white lg:px-16 px-5 rounded-lg  py-10"> */}
-            <div className="flex items-center justify-between text-white lg:px-16 px-5 rounded-lg py-10 ">
+            <div className="back-image flex items-center justify-between text-white lg:px-16 px-5 rounded-lg py-10 ">
               <div className="relative z-10 hidden md:block">
                 <p className="text-sm font-openSans">Now in Bengaluru</p>
                 <h2 className="text-[30px] lg:text-[60px] text- font-bold mt-2 leading-[70px]">
@@ -71,20 +71,20 @@ const Banner = () => {
                 </div>
               </div>
 
-              <div className="relative z-10 text-white md:px-4 py-6 md:hidden block w-100 text-start md:text-center">
-                <h2 className="text-[30px] font-bold font-poppins">Car Servicing at-home</h2>
-                <p className="text-sm mt-1 pb-16 md:pb-0">
+              <div className="relative z-10 text-white md:px-4  md:hidden block w-100 text-start md:text-center">
+                <h2 className="text-[30px] font-bold font-poppins">Car Servicing <br /> at-home</h2>
+                <p className="text-[18px] font-poppins mt-1 pb-20 md:pb-0">
                   Delivering trust always
                 </p>
 
-                <div className="flex justify-between items-center text-sm mt-4">
+                <div className="flex justify-between items-center text-[14px] font-openSans mt-16">
                   <span>Now in Bangalore</span>
                   <span className="text-green-400 font-semibold">
                     Upto ₹300 Off
                   </span>
                 </div>
 
-                <button className="mt-6 w-full bg-white text-blue-600 font-semibold py-2 rounded-lg shadow-md hover:bg-blue-100">
+                <button className="font-openSans text-[12px] mt-2 py-3 w-full bg-white text-blue-600 font-semibold  rounded-lg shadow-md hover:bg-blue-100">
                   BOOK A SERVICE
                 </button>
               </div>

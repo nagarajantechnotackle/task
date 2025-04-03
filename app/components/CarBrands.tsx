@@ -47,10 +47,10 @@ const CarBrandSection = () => {
         {/* Steps Section */}
         <div className="flex flex-col items-center w-full md:w-1/2 text-center d-none ">
           <h2 className="text-[36px] font-bold text-gray-900 font-poppins">Secure your service in Just 3 simple steps</h2>
-          <div className="flex items-center justify-center gap-6 lg:mt-16 mt-5">
+          <div className="flex items-center justify-center gap-6 lg:mt-10 mt-5 w-full">
             {steps.map((step, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="flex flex-col items-center w-[60px]">
+              <div key={index} className="flex items-start gap-4 w-[33%]">
+                <div className="flex flex-col items-center w-[100px]">
                   <Image src={`/images/${step.src}.png`} alt={step.text} width={75} height={65} />
                   <p className="h-[60px] mt-2 text-sm text-gray-700 font-openSans text-[15px] font-bold">{step.text}</p>
                 </div>

@@ -3,12 +3,12 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="container-fluid mx-auto px-4 bg-white">
-      <div className="flex justify-between items-center p-4 shadow-md ">
+      <div className="flex justify-between items-center lg:p-4 py-4 lg:shadow-md ">
         <h1 className="font-openSans font-extrabold bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent text-bold text-4xl">
           RUMO
         </h1>
         <div className="flex items-center gap-4 flex-wrap">
-          <div className="p-[1px] bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] rounded-md">
+          <div className="p-[1px] lg:bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] rounded-md ">
             <button className="flex items-center gap-2 px-4 py-2 bg-white text-lg font-semibold rounded-md">
               <Image
                 src={"/images/call.png"}
@@ -16,7 +16,7 @@ const Header = () => {
                 width={20}
                 height={20}
               ></Image>
-              <span className="font-openSans text-[14px] bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent font-bold">
+              <span className="font-openSans text-[14px] bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent font-bold ">
                 CALL US
               </span>
             </button>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaPen } from "react-icons/fa";
 import Image from "next/image";
 
 interface SubService {
@@ -60,20 +59,20 @@ export default function MobileCarServices() {
 
   return (
     <div className="mx-auto p-4 bg-white shadow-md">
-      <div className="flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-xl border border-blue-400 shadow-md">
+      <div className="flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white  rounded-xl border border-blue-400 shadow-md">
         <img
           src="/images/serviceCarIcon.png"
           alt="Car"
-          className="w-24 h-24 rounded-md mr-4"
+          className="w-24  rounded-md mr-4 ps-1 py-1"
         />
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold">Maruti Swift</h3>
-          <p className="text-md">LXi, Petrol, 2019</p>
-          <p className="text-md font-semibold">DL12ATS140</p>
+        <div className="flex-1 py-4">
+          <h3 className="text-[16px] font-openSans font-semibold">Maruti Swift</h3>
+          <p className="text-[12px] font-opnSans">LXi, Petrol, 2019</p>
+          <p className="text-[12px] font-opnSans font-semibold">DL12ATS140</p>
         </div>
-        <FaPen className="text-white text-lg cursor-pointer" />
+     <Image src={"/images/edit.png"} className="py-4 pe-4 w-[35px] h-[50px]" alt="edit" width={20} height={20}></Image>
       </div>
-      <p className="mt-4 text-center font-semibold text-black">
+      <p className="mt-4 text-center font-semibold text-black font-openSans text-[14px] py-2">
         Services available for Maruti Suzuki
       </p>
       {services.map((service) => (
@@ -83,7 +82,7 @@ export default function MobileCarServices() {
         >
           <button
             onClick={() => toggleCollapse(service.name)}
-            className="relative w-full flex justify-between items-center p-4 text-left bg-gray-100 font-bold text-lg text-black rounded-md"
+            className="relative w-full flex justify-between items-center p-4 py-6 text-left bg-gray-100 font-bold text-[18px] font-poppins text-black rounded-md"
           >
             {/* <span className="flex items-center gap-2"> */}
             <span className={openService === service.name ? "flex items-center gap-2 bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent" : "flex items-center gap-2"}>       
@@ -128,15 +127,15 @@ export default function MobileCarServices() {
           
           </button>
           {openService === service.name && service.subServices && (
-            <div className="pt-3 bg-white">
+            <div className="pt-3 bg-[rgba(249,249,251,1)]">
               {service.subServices.map((sub) => (
-                <div key={sub.title} className="p-3 border rounded-md mb-2">
+                <div key={sub.title} className="p-3 border rounded-md border-[rgba(243,243,246,1)] mb-2">
                   <div className="flex justify-between flex-wrap">
-                    <h4 className="font-semibold text-black">{sub.title}</h4>
+                    <h4 className="font-semibold text-black text-[16px] font-openSans">{sub.title}</h4>
 
-                    <p className="text-lg font-bold text-black">
+                    <p className="text-[18px] font-poppins font-bold text-black">
                       ₹ {sub.price}{" "}
-                      <span className="text-gray-500 line-through text-sm">
+                      <span className="text-gray-500 line-through text-[12px] font-poppins block text-end">
                         ₹ {sub.oldPrice}
                       </span>
                     </p>
@@ -151,7 +150,7 @@ export default function MobileCarServices() {
                         width={20}
                         height={20}
                       />
-                      <span className="text-gray-600 text-lg">{sub.time}</span>
+                      <span className="text-gray-600 text-[12px] font-openSans">{sub.time}</span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <Image
@@ -160,20 +159,22 @@ export default function MobileCarServices() {
                         width={20}
                         height={20}
                       />
-                      <span className="text-gray-600 text-lg">
+                      <span className="text-gray-600 text-[12px] font-openSans">
                         {sub.service}
                       </span>
                     </div>
-                    <p className="text-blue-600 cursor-pointer mt-2 mb-2">
+                    <p className="text-blue-600 cursor-pointer mt-2 mb-2 text-[12px] font-openSans">
                       See details
                     </p>
-
-                    <button className="text-[12px] bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg mt-2">
+<div className="flex gap-4 items-center ">
+<button className="text-[12px] font-openSans white-space-nowrap font-bold bg-gradient-to-r from-blue-600 via-blue-800 to-purple-600 text-white py-3 px-6 rounded-lg shadow-lg  mt-2">
                       BOOK NOW
                     </button>
-                    <span className="font-openSans bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent font-bold mx-5">
+                    <p className="font-poppins white-space-nowrap mb-0 bg-gradient-to-r from-[#0060EF] via-[#150190] to-[#8601F0] bg-clip-text text-transparent font-bold mx-5">
                       CALL US
-                    </span>
+                    </p>
+</div>
+                  
                   </div>
                 </div>
               ))}

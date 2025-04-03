@@ -18,11 +18,11 @@ const brands = [
 
 export default function BrandsCarousel() {
   return (
-    <div className="bg-gray-100 py-10">
-      <h2 className="text-center text-[24px] font-poppins font-semibold text-gray-800">
+    <div className="lg:bg-gray-100 border-t border-b lg:border-0 border-[#b8b6b6] py-10">
+      <h2 className="text-center lg:text-[24px] text-[14px] font-poppins font-semibold text-gray-800">
         Brands we Use
       </h2>
-      <p className="text-center text-gray-500 mb-6 text-[14px] font-openSans">
+      <p className="text-center text-gray-500 mb-6 lg:text-[14px] text-[12px]  font-openSans">
         Authorized/genuine OEM/OES Parts
       </p>
       <div className="w-full overflow-hidden lg:mt-10 mt-5">

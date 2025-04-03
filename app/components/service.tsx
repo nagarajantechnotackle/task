@@ -147,7 +147,7 @@ const CarService: React.FC = () => {
               key={index}
               className="bg-white text-black p-6 flex flex-col justify-between items-center shadow-lg relative border border-[#dedede]"
             >
-              <div className="flex items-center justify-between w-full">
+              <div className="flex items-start justify-between w-full">
                 <h3 className="font-bold text-[30px] font-poppins">{service.title}</h3>
 
                 <div className="text-right">
